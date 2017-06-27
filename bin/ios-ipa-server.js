@@ -38,17 +38,18 @@ program
   .option('-i, --ip <ip-address>', 'set ip address for server (defaults is automatic getting by program)')
   .parse(process.argv);
 
-var ipAddress = program.ip || underscore
-  .chain(require('os').networkInterfaces())
-  .values()
-  .flatten()
-  .find(function(iface) {
-    return iface.family === 'IPv4' && iface.internal === false;
-  })
-  .value()
-  .address;
+// var ipAddress = program.ip || underscore
+//   .chain(require('os').networkInterfaces())
+//   .values()
+//   .flatten()
+//   .find(function(iface) {
+//     return iface.family === 'IPv4' && iface.internal === false;
+//   })
+//   .value()
+//   .address;
 
 
+var ipAddress = "112.74.81.51";
 
 var globalCerFolder = osHomedir() + '/.ios-ipa-server/' + ipAddress;
 var port = program.port || 1234;
