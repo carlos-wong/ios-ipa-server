@@ -49,10 +49,10 @@ program
 //   .address;
 
 
-var ipAddress = "112.74.81.51";
+var ipAddress = "40.73.96.115";
 
 var globalCerFolder = osHomedir() + '/.ios-ipa-server/' + ipAddress;
-var port = program.port || 1234;
+var port = program.port || "1234";
 
 if (!exit.exited) {
   main();
